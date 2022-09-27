@@ -347,10 +347,12 @@ function play () {
 scene.onOverlapTile(SpriteKind.Enemy, assets.tile`myTile5`, function (sprite, location) {
     music.thump.play()
     tiles.setTileAt(location, assets.tile`myTile10`)
+    pause(100)
 })
 scene.onOverlapTile(SpriteKind.Enemy, assets.tile`myTile6`, function (sprite, location) {
     music.thump.play()
     tiles.setTileAt(location, assets.tile`myTile9`)
+    pause(100)
 })
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
     in_game = false
@@ -500,23 +502,23 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
         `)
     game.setDialogCursor(img`
         f f f f f f f f f f f f f f f f 
-        f f f f f f f f f f f f f f f f 
-        f f f f f f 7 7 7 7 6 f f f f f 
-        f f f f 7 7 6 f f f 7 7 6 f f f 
-        f f f f 7 7 6 f f f 7 7 6 f f f 
-        f f f f 7 7 6 f f f 7 7 6 f f f 
-        f f f f 7 7 7 7 7 7 7 7 6 f f f 
-        f f 7 7 7 7 7 7 7 7 7 7 7 7 6 f 
-        f f 7 7 6 f f f f f f f 7 7 6 f 
-        f f 7 7 6 f f f f f f f 7 7 6 f 
-        f f 7 7 6 f f f f f f f 7 7 6 f 
-        f f 7 7 6 f f f f f f f 7 7 6 f 
-        f f 7 7 6 f f f f f f f 7 7 6 f 
-        f f 7 7 6 f f f f f f f 7 7 6 f 
+        f f f f f f 7 7 7 7 f f f f f f 
+        f f f f f f 7 7 7 7 f f f f f f 
+        f f f f 7 7 f f f f 7 7 f f f f 
+        f f f f 7 7 f f f f 7 7 f f f f 
+        f f f f 7 7 f f f f 7 7 f f f f 
+        f f f f 7 7 7 7 7 7 7 7 f f f f 
+        f f 7 7 7 7 7 7 7 7 7 7 7 7 f f 
+        f f 7 7 f f f f f f f f 7 7 f f 
+        f f 7 7 f f f f f f f f 7 7 f f 
+        f f 7 7 f f f f f f f f 7 7 f f 
+        f f 7 7 f f f f f f f f 7 7 f f 
+        f f 7 7 f f f f f f f f 7 7 f f 
+        f f 7 7 f f f f f f f f 7 7 f f 
         f f f f f f f f f f f f f f f f 
         f f f f f f f f f f f f f f f f 
         `)
-    game.showLongText(" > You lost...          " + "> But you lasted for: " + time_since_ingame_play_started + " seconds...", DialogLayout.Full)
+    game.showLongText(" > You lost...          " + "> But you lasted for: " + time_since_ingame_play_started + " seconds..." + "                " + "> And you got to Night " + night + "....", DialogLayout.Full)
     game.reset()
 })
 let time_since_ingame_play_started = 0
@@ -869,10 +871,12 @@ myMenu.onButtonPressed(controller.A, function (selection, selectedIndex) {
         game.showSystemMenu()
     }
     if (selection == "News") {
-        game.showLongText("BETAv0.01: Welcome to ZNaD (Zero Nights At Delta's), v0.01. Only thing new here is that the game is out1", DialogLayout.Full)
+        game.showLongText("BETAv0.02: Welcome to ZNaD (Zero Nights At Delta's), v0.02. Small bugfixes, light will now turn off when status bar runs all the way down. LOREBOOK UPDATE! CH:2 OUT NOW!", DialogLayout.Full)
     }
     if (selection == "Lorebook") {
-        game.showLongText("ZNaD Lorebook:              3:26AM, Delta's Arcade & Pizzaria got closed because of, wait.. let me look.... \"All animatronic assets have caused 1 fatality, which is 3 total, and then 3 kids were kidnapped during the Ultimate Lazer Tag game.\" I, Isaac got hired, to inspect them. But that wasn't the actual job. The actual job, was having me be left for dead with a flashlight, and 3 dangerous possesed animatronics. But how do I survive, that.. hellspawn...?", DialogLayout.Full)
+        game.showLongText("ZNaD Lorebook CH1 :              3:26AM, Delta's Arcade & Pizzaria got closed because of, wait.. let me look.... \"All animatronic assets have caused 1 fatality, which is 3 total, and then 3 kids were kidnapped during the Ultimate Lazer Tag game.\" I, Isaac got hired, to inspect them. But that wasn't the actual job. The actual job, was having me be left for dead with a flashlight, and 3 dangerous possesed animatronics. But how do I survive, that.. hellspawn...?", DialogLayout.Full)
+        game.showLongText("ZNaD Lorebook CH2 :  It's Thursday afternoon, 2:45PM, I've gotten to Delta's, but there's no-one here. The owner emailed me the address for the place and said he would meet me here.                         Alright, I just saw a little vent or somthin' over on the wall that I THINK I can crawl through. I'll catch you guys up when I get in.", DialogLayout.Full)
+        game.showLongText("Okay, so I got into the place... and I'm either hallucinating, or I might die here, no escape. The vent kinda.. uh.. collapsed.. I don't see a way outta here. Next thing you know I've found myself walkin' around in a deathtrap, and uh.. the deadly trio woke up. I immediatly hid. I couldn't for long though. I still needed to get out of here! A couple minutes later I heard a muffled \"HELLO?! ISAAC?!\" from outside and then a not so silent, \"Shoot, he's stuck in there isn't he?\" And I knew, this was gonna be my home. No way out.", DialogLayout.Full)
     }
 })
 game.onUpdateInterval(1000, function () {

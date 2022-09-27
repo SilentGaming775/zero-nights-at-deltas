@@ -7,13 +7,13 @@
         "pxt-sight": "github:felixtsu/pxt-sight#v0.2.2",
         "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
         "Color Fading": "github:jwunderl/pxt-color#v0.2.2",
-        "InhouseLoadingAnimations": "github:UnsignedArduino/InhouseLoadingAnimations#v1.0.0",
         "Timers": "github:microsoft/arcade-timers#v1.1.0",
         "arcade-mini-menu": "github:riknoll/arcade-mini-menu#c8b01b9d47f85a5133c786f1c026b1f376fe4285",
         "arcade-text": "github:microsoft/arcade-text#v1.3.0",
         "SystemMenuBlocks": "github:UnsignedArduino/SystemMenuBlocks#11b7264d682ea79f618f3538a06dc9d60d1acf78",
         "pxt-status-bar": "github:jwunderl/pxt-status-bar#v0.4.1",
-        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2"
+        "arcade-character-animations": "github:microsoft/arcade-character-animations#v0.0.2",
+        "InhouseLoadingAnimations": "github:SilentGaming775/InhouseLoadingAnimations#31f63ab824b6e8edd7f78d241b1b7c341111bdcc"
     },
     "files": [
         "main.blocks",
